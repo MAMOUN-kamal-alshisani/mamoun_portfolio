@@ -98,6 +98,8 @@
         }
       }
       .form_input_cr{
+        @include flex(flex, center, wrap, column);
+
         position: relative;
         z-index: 2;
 
@@ -331,7 +333,7 @@
       }
 
       form {
-        @include flex(flex, unset, wrap, column);
+        @include flex(flex, center, wrap, column);
         flex: 2;
 
         align-items: center;
@@ -369,10 +371,15 @@
             // border: $borderTr;
           }
         }
+        .form_input_cr{
+          @include flex(flex, center, wrap, column);
+          align-items: center;
+        }
         input:not(input[type="submit"]),
         textarea {
+
           padding: 15px;
-          width: 210px;
+          width: 70%;
           border-radius: 6px;
           border: 2px solid $clr2_pg;
           background-color: transparent;
