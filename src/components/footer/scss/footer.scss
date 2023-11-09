@@ -1,0 +1,32 @@
+@import "../../../variables/variables";
+
+
+footer{
+background-color: $clr3_pg;
+height: 100%;
+// color: white;
+margin-top: 8rem;
+padding: 3rem 0;
+text-align: center;
+
+
+ul{
+  list-style: none;
+}
+    a{
+color: $clr1_pg;
+font-size: larger;
+    }
+    .main_link{
+        font-size: xx-large;
+      }
+      .link_list{
+
+      }
+
+      .social_links{
+        a{
+            font-size: xx-large;
+        }
+      }
+}

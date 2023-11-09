@@ -1,0 +1,367 @@
+#about {
+  text-align: center;
+  height: 100%;
+}
+#about .about_cr {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+  margin-bottom: 100px;
+  align-items: center;
+}
+#about .about_cr .about_me {
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  border-radius: 32px;
+  background: linear-gradient(45deg, transparent, #4db5ff, transparent);
+  display: grid;
+  place-items: center;
+}
+#about .about_cr .about_me .about_me_img {
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: rotate(10deg);
+  transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+}
+#about .about_cr .about_me .about_me_img .about_img {
+  width: 100%;
+  height: 100%;
+}
+#about .about_cr .about_me .about_me_img:hover {
+  transform: rotate(0deg);
+}
+#about .about_cr .about_intro {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+#about .about_cr .about_intro p {
+  position: relative;
+  text-align: start;
+  text-transform: capitalize;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  padding: 15px;
+  letter-spacing: 0.1rem;
+  border: 2px solid #2c2c6c;
+  border-radius: 20px;
+  background-color: transparent;
+  overflow: hidden;
+}
+#about .about_cr .about_intro p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #2c2c6c;
+  z-index: -1;
+  transition: 0.5s;
+}
+#about .about_cr .about_intro p:hover {
+  border: 1px solid #2c2c6c;
+}
+#about .about_cr .about_intro p:hover::before {
+  width: 100%;
+}
+#about .about_cr .about_intro .link {
+  margin-top: 10px;
+}
+#about .about_content {
+  text-align: start;
+}
+#about .about_content .about_cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+#about .about_content .about_cards .abt_card {
+  position: relative;
+  background-color: transparent;
+  border: 2px solid #2c2c6c;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+#about .about_content .about_cards .abt_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #2c2c6c;
+  z-index: -1;
+  transition: 0.5s;
+}
+#about .about_content .about_cards .abt_card:hover {
+  border: 1px solid #2c2c6c;
+}
+#about .about_content .about_cards .abt_card:hover::before {
+  width: 100%;
+}
+#about .about_content .about_cards .abt_card h5 {
+  color: #4db5ff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+#about .about_content .about_cards .abt_card p {
+  color: rgba(255, 255, 255, 0.6);
+}
+#about .about_content p {
+  margin: 32px 0 45px;
+}
+
+@media screen and (max-width: 1024px) {
+  #about .about_cr {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 100px;
+  }
+  #about .about_cr .about_me {
+    max-width: 400px;
+    margin: 0px auto 64px;
+    aspect-ratio: 1/1;
+    border-radius: 32px;
+    background: linear-gradient(45deg, transparent, #4db5ff, transparent);
+    display: grid;
+    place-items: center;
+  }
+  #about .about_cr .about_me .about_me_img {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+  }
+  #about .about_cr .about_me .about_me_img .about_img {
+    width: 100%;
+    height: 100%;
+  }
+  #about .about_cr .about_me .about_me_img:hover {
+    transform: rotate(0deg);
+  }
+  #about .about_cr .about_intro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  #about .about_cr .about_intro p {
+    text-align: start;
+    text-transform: capitalize;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    padding: 10px;
+  }
+  #about .about_cr .about_intro .link {
+    margin-top: 10px;
+  }
+  #about .about_cr .about_content p {
+    margin: 16px 0 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  #about .about_cr .about_me {
+    width: 350px;
+    margin: 0px auto 48px;
+    aspect-ratio: 1/1;
+    border-radius: 32px;
+    background: linear-gradient(45deg, transparent, #4db5ff, transparent);
+    display: grid;
+    place-items: center;
+  }
+  #about .about_cr .about_me .about_me_img {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+  }
+  #about .about_cr .about_me .about_me_img .about_img {
+    width: 100%;
+    height: 100%;
+  }
+  #about .about_cr .about_me .about_me_img:hover {
+    transform: rotate(0deg);
+  }
+  #about .about_cr .about_intro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-wrap: balance;
+    padding: 15px;
+  }
+  #about .about_cr .about_intro p {
+    text-align: start;
+    text-transform: capitalize;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    padding: 25px;
+  }
+  #about .about_cr .about_intro .link {
+    margin-top: 10px;
+  }
+  #about .about_content {
+    text-align: start;
+  }
+  #about .about_content .about_cards {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  #about .about_content .about_cards h3 {
+    position: absolute;
+    left: -80px;
+    bottom: 50%;
+    transform: translate(-50%);
+  }
+  #about .about_content .about_cards .abt_card {
+    background-color: transparent;
+    border: 2px solid #2c2c6c;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+  }
+  #about .about_content .about_cards .abt_card:hover {
+    background-color: #1f1f38;
+    border: 1px solid #2c2c6c;
+  }
+  #about .about_content .about_cards .abt_card h5 {
+    color: #4db5ff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+  #about .about_content .about_cards .abt_card p {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  #about .about_content p {
+    margin: 32px 0 45px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #about .about_cr .about_me {
+    width: 90%;
+    margin: 0px auto 48px;
+    aspect-ratio: 1/1;
+    border-radius: 32px;
+    background: linear-gradient(45deg, transparent, #4db5ff, transparent);
+    display: grid;
+    place-items: center;
+  }
+  #about .about_cr .about_me .about_me_img {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+  }
+  #about .about_cr .about_me .about_me_img .about_img {
+    width: 100%;
+    height: 100%;
+  }
+  #about .about_cr .about_me .about_me_img:hover {
+    transform: rotate(0deg);
+  }
+  #about .about_cr .about_intro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-wrap: balance;
+    padding: 0px;
+  }
+  #about .about_cr .about_intro p {
+    text-align: start;
+    text-transform: capitalize;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    padding: 25px;
+  }
+  #about .about_cr .about_intro .link {
+    margin-top: 10px;
+  }
+  #about .about_content {
+    text-align: start;
+  }
+  #about .about_content .about_cards {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  #about .about_content .about_cards h3 {
+    position: absolute;
+    left: -80px;
+    bottom: 50%;
+    transform: translate(-50%);
+  }
+  #about .about_content .about_cards .abt_card {
+    position: relative;
+    background-color: transparent;
+    border: 2px solid #2c2c6c;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+  }
+  #about .about_content .about_cards .abt_card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #2c2c6c;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  #about .about_content .about_cards .abt_card:hover {
+    border: 1px solid #2c2c6c;
+  }
+  #about .about_content .about_cards .abt_card:hover::before {
+    width: 100%;
+  }
+  #about .about_content .about_cards .abt_card h5 {
+    color: #4db5ff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+  #about .about_content .about_cards .abt_card p {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  #about .about_content p {
+    margin: 32px 0 45px;
+  }
+}/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,163 @@
+@import "../../../variables/variables";
+
+nav {
+  @include flex(flex,center,nowrap,row);
+  width: max-content;
+  position: sticky;
+  background-color: rgb(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  margin: 0 auto;
+  z-index: 999;
+  // transform: translateX(-50%);
+  // left: 50%;
+  // top: 100px;
+  border-radius: 48px;
+  padding: 0.7rem 1.7rem ;
+  gap: 5px;
+  bottom: 10px;
+
+
+  a{
+    background: $borderTr;
+    // color: $clr2_pg;
+    color: grey;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: large;
+
+   
+  }
+  a.active{
+        background: $clr1_pg;
+        color: $clr_white;
+  }
+}
+
+@media screen and (max-width:750px) {
+  nav {
+    @include flex(flex,center,nowrap,row);
+    width: max-content;
+    position: sticky;
+    // left: 50%;
+    // transform: translateX(-25%);
+
+    background-color: rgb(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 48px;
+    padding: 0.7rem 0.2rem ;
+    gap: 5px;
+    bottom: 10px;
+    
+  
+    a{
+      background: $borderTr;
+      color: $clr2_pg;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: large;
+  
+     
+    }
+    a.active{
+          background: $clr1_pg;
+          color: $clr_white;
+    }
+  }
+  
+  
+}
+@media screen and (max-width:350px) {
+  nav {
+    @include flex(flex,center,wrap,row);
+    width: max-content;
+    position: sticky;
+    // left: 50%;
+    // transform: translateX(-25%);
+
+    background-color: rgb(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 48px;
+    padding: 0.7rem 0.2rem ;
+    gap: 5px;
+    bottom: 10px;
+    
+  
+    a{
+      background: $borderTr;
+      color: $clr2_pg;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: small;
+  
+     
+    }
+    a.active{
+          background: $clr1_pg;
+          color: $clr_white;
+    }
+  }
+}
+
+@media screen and (max-width:300px) {
+  nav {
+    @include flex(flex,center,wrap,row);
+    width: max-content;
+    position: sticky;
+    // left: 50%;
+    // transform: translateX(-25%);
+
+    background-color: rgb(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 48px;
+    padding: 0.7rem 0.2rem ;
+    gap: 5px;
+    bottom: 10px;
+    
+  
+    a{
+      background: $borderTr;
+      color: $clr2_pg;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: xx-small;
+  
+     
+    }
+    a.active{
+          background: $clr1_pg;
+          color: $clr_white;
+    }
+  }
+}
+// @media screen and (max-width:650px) {
+//   nav {
+//     @include flex(flex,center,nowrap,row);
+//     width: max-content;
+//     position: sticky;
+//     background-color: rgb(0, 0, 0, 0.3);
+//     backdrop-filter: blur(10px);
+//     transform: translateX(-25%);
+//     border-radius: 48px;
+//     padding: 0.7rem 1.2rem ;
+//     gap: 5px;
+//     bottom: 10px;
+//     left: 50%;
+    
+  
+//     a{
+//       background: $borderTr;
+//       color: $clr2_pg;
+//       padding: 10px;
+//       border-radius: 50%;
+//       font-size: large;
+  
+     
+//     }
+//     a.active{
+//           background: $clr1_pg;
+//           color: $clr_white;
+//     }
+//   }
+  
+  
+// }

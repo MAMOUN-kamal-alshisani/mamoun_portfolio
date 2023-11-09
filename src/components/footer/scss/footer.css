@@ -1,0 +1,20 @@
+footer {
+  background-color: #4db5ff;
+  height: 100%;
+  margin-top: 8rem;
+  padding: 3rem 0;
+  text-align: center;
+}
+footer ul {
+  list-style: none;
+}
+footer a {
+  color: #1f1f38;
+  font-size: larger;
+}
+footer .main_link {
+  font-size: xx-large;
+}
+footer .social_links a {
+  font-size: xx-large;
+}/*# sourceMappingURL=footer.css.map */

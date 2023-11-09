@@ -1,0 +1,401 @@
+@import "../../../variables/variables";
+// .slide-in {
+//   opacity: 0;
+//   transform: translateX(-100px);
+//   transition: opacity 0.5s ease, transform 0.5s ease;
+// }
+
+// .slide-in--active {
+//   opacity: 1;
+//   transform: translateX(0);
+// }
+#experience {
+height: 100%;
+
+h1 {
+  color: $clr3_pg;
+  padding-bottom: 50px;
+  text-align: center
+}
+  .experience_cr {
+    @include flex(flex, center, nowrap, row);
+    gap: 25px;
+    padding: 25px;
+    
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // justify-items: center;
+
+    .set_cr {
+      @include flex(flex, unset, nowrap, column);
+      gap: 25px;
+      align-items: center;
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-radius: 16px;
+      padding: 32px;
+      width: 85%;
+      cursor: pointer;
+      z-index: 1;
+      position: relative;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        // width: 100%;
+        // height: 0;
+        background: #2c2c6c;
+        z-index: -1;
+        transition: 0.5s;
+      }
+      &:hover{
+        // background-color: $clr1_pg;
+        background-color: $clr1_pg;
+        border: 1px solid $clr2_pg;
+  
+        // &::before{
+        //   // height: 100%;
+        //   // top: 100%;
+        //   // left: 100%;
+        //   // background-color:aliceblue ;
+        // }
+      }
+
+      // &:hover {
+      //   background-color: $clr1_pg;
+      //   border: 1px solid $clr2_pg;
+      // }
+      h3,h2 {
+        text-align: center;
+      }
+    
+      .skill_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+          // justify-items: center;
+        gap: 80px;
+        padding: 20px 0px 20px 0px;
+
+        .skill_item {
+          @include flex(flex, unset, nowrap, row);
+          align-items: center;
+          gap: 10px;
+          width: 100%;
+          svg{
+            font-size: large;
+            color: $clr3_pg;
+            // border: 1px solid white;
+            // border-radius: 50%;
+          }
+          // padding: 10px;
+          .skills{
+          // @include flex(flex, flex-start, nowrap, row);
+
+            // text-align: center;
+            .icon_cr{
+              color: #4db5ff;
+            }
+            // @include flex(flex, unset, wrap, column);
+            // h4 {
+            //     @include flex(flex, unset, nowrap, row);
+            //     gap: 10px;
+            //     align-items: center;
+            //     // word-wrap: break-word;
+            //     // word-break: break-all;
+            //   }
+              small {
+                color: $clr2_pr;
+                width: 100%;
+                text-align: end;
+              }
+          }
+   
+        }
+      }
+    }
+    .backend_cr, .frontend_cr {
+      border: 2px solid $clr2_pg;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #2c2c6c;
+        z-index: -1;
+        transition: 0.5s;
+      }
+      &:hover{
+        // background-color: $clr1_pg;
+        border: 1px solid $clr2_pg;
+  
+        &::before{
+          width: 100%;
+          // left: 100%;
+          // background-color:aliceblue ;
+        }
+      }
+      h2{
+        color: #4db5ff;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width:1024px) {
+  #experience {
+
+    .experience_cr {
+      @include flex(flex, center, wrap, row);
+      gap: 25px;
+      padding: 25px;
+
+  
+      .set_cr {
+        @include flex(flex, unset, nowrap, column);
+        gap: 25px;
+        align-items: center;
+        background-color: #2c2c6c;
+        border: 1px solid transparent;
+        border-radius: 16px;
+        padding: 32px;
+        width: fit-content;
+
+        cursor: pointer;
+        &:hover {
+          background-color: $clr1_pg;
+          border: 1px solid $clr2_pg;
+        }
+        h3,h2 {
+          text-align: center;
+        }
+      
+        .skill_list {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+            // justify-items: center;
+          gap: 40px;
+          padding: 20px 0px 20px 0px;
+  
+          .skill_item {
+            @include flex(flex, unset, nowrap, row);
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            svg{
+              font-size: large;
+            }
+            // padding: 10px;
+            .skills{
+            // @include flex(flex, flex-start, nowrap, row);
+  
+              // text-align: center;
+              .icon_cr{
+  
+              }
+              // @include flex(flex, unset, wrap, column);
+              // h4 {
+              //     @include flex(flex, unset, nowrap, row);
+              //     gap: 10px;
+              //     align-items: center;
+              //     // word-wrap: break-word;
+              //     // word-break: break-all;
+              //   }
+                small {
+                  color: $clr2_pr;
+                  width: 100%;
+                  text-align: end;
+                }
+            }
+     
+          }
+        }
+      }
+      .backend_cr, .frontend_cr {
+        width: 100%;
+        h2{
+          color: #4db5ff;
+        }
+  
+      }
+  
+    }
+  }
+  
+}
+
+
+@media screen and (max-width:650px) {
+  #experience {
+
+    .experience_cr {
+      @include flex(flex, center, wrap, row);
+      gap: 25px;
+      padding: 25px;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
+      // justify-items: center;
+  
+      .set_cr {
+        @include flex(flex, unset, nowrap, column);
+        gap: 25px;
+        align-items: center;
+        background-color: #2c2c6c;
+        border: 1px solid transparent;
+        border-radius: 16px;
+        padding: 32px;
+        width: fit-content;
+
+        cursor: pointer;
+        &:hover {
+          background-color: $clr1_pg;
+          border: 1px solid $clr2_pg;
+        }
+        h3,h2 {
+          text-align: center;
+        }
+      
+        .skill_list {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+            // justify-items: center;
+          gap: 40px;
+          padding: 20px 0px 20px 0px;
+  
+          .skill_item {
+            @include flex(flex, unset, nowrap, row);
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            svg{
+              font-size: large;
+            }
+            // padding: 10px;
+            .skills{
+            // @include flex(flex, flex-start, nowrap, row);
+  
+              // text-align: center;
+              .icon_cr{
+  
+              }
+              // @include flex(flex, unset, wrap, column);
+              // h4 {
+              //     @include flex(flex, unset, nowrap, row);
+              //     gap: 10px;
+              //     align-items: center;
+              //     // word-wrap: break-word;
+              //     // word-break: break-all;
+              //   }
+                small {
+                  color: $clr2_pr;
+                  width: 100%;
+                  text-align: end;
+                }
+            }
+     
+          }
+        }
+      }
+      .backend_cr, .frontend_cr {
+        width: 100%;
+        h2{
+          color: #4db5ff;
+        }
+  
+      }
+  
+    }
+  }
+  
+}
+
+
+
+
+@media screen and (max-width:350px) {
+  #experience {
+
+    .experience_cr {
+      @include flex(flex, center, wrap, row);
+      gap: 25px;
+      padding: 0px;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
+      // justify-items: center;
+  
+      .set_cr {
+        @include flex(flex, unset, nowrap, column);
+        gap: 25px;
+        align-items: center;
+        background-color: #2c2c6c;
+        border: 1px solid transparent;
+        border-radius: 16px;
+        padding: 32px;
+        width: fit-content;
+
+        cursor: pointer;
+        &:hover {
+          background-color: $clr1_pg;
+          border: 1px solid $clr2_pg;
+        }
+        h3,h2 {
+          text-align: center;
+        }
+      
+        .skill_list {
+          display: grid;
+          grid-template-columns: 1fr;
+            // justify-items: center;
+          gap: 40px;
+          padding: 20px 0px 20px 0px;
+  
+          .skill_item {
+            @include flex(flex, unset, nowrap, row);
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            svg{
+              font-size: large;
+            }
+            // padding: 10px;
+            .skills{
+            // @include flex(flex, flex-start, nowrap, row);
+  
+              // text-align: center;
+              .icon_cr{
+  
+              }
+              // @include flex(flex, unset, wrap, column);
+              // h4 {
+              //     @include flex(flex, unset, nowrap, row);
+              //     gap: 10px;
+              //     align-items: center;
+              //     // word-wrap: break-word;
+              //     // word-break: break-all;
+              //   }
+                small {
+                  color: $clr2_pr;
+                  width: 100%;
+                  text-align: end;
+                }
+            }
+     
+          }
+        }
+      }
+      .backend_cr, .frontend_cr {
+        min-width: fit-content;
+        h2{
+          color: #4db5ff;
+        }
+  
+      }
+  
+    }
+  }
+  
+}

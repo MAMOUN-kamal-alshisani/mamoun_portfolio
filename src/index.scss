@@ -1,0 +1,255 @@
+/*
+=============== 
+Variables
+===============
+*/
+@import "./variables/variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: fit-content;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: $clr1_pg;
+  // background-color: black;
+
+  color: $clr_white;
+  line-height: 1.7;
+}
+
+.cr {
+  width: $lgWidth;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #4db5ff;
+  padding-bottom: 50px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+@media screen and (max-width:350px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+section {
+  height: 100vh;
+  margin-top: 8rem;
+}
+
+section > h2,
+section > h5 {
+  text-align: center;
+  color: $clr2_pr;
+}
+
+section > h2 {
+  color: $clr3_pg;
+  margin-bottom: 3rem;
+}
+
+.text-light {
+  color: $clr2_pg;
+}
+a {
+  color: $clr3_pg;
+  transition: $transition;
+  // color: $clr3_pg;
+
+  &:hover {
+    // background-color: $clr_white;
+    color: $clr_white;
+  }
+}
+
+.primary_btn {
+  // background-color: #4db5ff;
+  // color: black;
+  // cursor: $cursorPointer;
+  // width: max-content;
+  // display: inline-block;
+  // border: 1px solid $clr3_pg;
+  // transition: $transition;
+  // padding: 0.75rem 1.2rem;
+  // border-radius: 0.4rem;
+}
+.btn {
+  position: relative;
+  display: inline-flex;
+  cursor: $cursorPointer;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 10px;
+  // height: 100%;
+  background-color: transparent;
+  border: 0.2rem solid $clr3_pg;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: $clr3_pg;
+  z-index: 1;
+  overflow: hidden;
+  // box-shadow: 0px 2px 5px 0px grey;
+
+  // color: $clr3_pg;
+  // width: max-content;
+  // display: inline-block;
+  // border: 1px solid $clr3_pg;
+  // transition: $transition;
+  // padding: 0.75rem 1.2rem;
+  // border-radius: 0.4rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: $clr3_pg;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  &:hover{
+    &::before{
+      width: 100%;
+      // left: 100%;
+      // background-color:aliceblue ;
+    }
+  
+  }
+}
+
+  // background-color: $clr_white;
+  // color: royalblue;
+  // background-color: antiquewhite;
+  // border: $borderTr;
+
+
+.btn-primary{
+  background-color: $clr3_pg;
+  color:$clr1_pg ;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #1f1f38;
+    color: $clr3_pg;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  &:hover{
+    &::before{
+      right: 100%;
+      width: 100%;
+      // left: 100%;
+      // background-color:aliceblue ;
+    }
+  
+  }
+}
+img {
+  display: block;
+  // width: 100%;
+  object-fit: $objFitCover;
+}
+
+@media screen and (max-width: 1024px) {
+  .cr {
+    width: $mdWidth;
+  }
+  section {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cr {
+    // width: $smWidth;
+  }
+  section {
+    margin-top: 4rem;
+  }
+
+  .btn {
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 5px;
+    background-color: transparent;
+    border: 0.2rem solid #4db5ff;
+    border-radius: 0.8rem;
+    font-size: 1.0rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: #4db5ff;
+    z-index: 1;
+    overflow: hidden;
+    // box-shadow: 0px 2px 5px 0px grey;
+  }
+}
+
+
+@media screen and (max-width: 397px) {
+
+  section {
+    margin-top: 4rem;
+  }
+
+  .btn {
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 5px;
+    background-color: transparent;
+    border: 0.1rem solid #4db5ff;
+    border-radius: 0.8rem;
+    font-size:0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: #4db5ff;
+    z-index: 1;
+    overflow: hidden;
+    // box-shadow: 0px 2px 5px 0px grey;
+  }
+}
+
+

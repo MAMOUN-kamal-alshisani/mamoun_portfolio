@@ -1,0 +1,387 @@
+@import "../../../variables/variables";
+
+#contact {
+  height: 100%;
+
+  .contact_cr {
+    @include flex(flex, unset, nowrap, row);
+
+    width: 60%;
+    gap: 12%;
+
+    .options_list {
+      @include flex(flex, unset, wrap, column);
+      flex: 1;
+      gap: 20px;
+      width: 100%;
+      .option_item {
+        @include flex(flex, center, wrap, column);
+        position: relative;
+        background-color: transparent;
+        border: 2px solid $clr2_pg;
+        align-items: center;
+        // background-color: #2c2c6c;
+        z-index: 1;
+        // border: 1px solid transparent;
+        min-width: fit-content;
+        width: 100%;
+        border-radius: 16px;
+        padding: 32px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background: $clr2_pg;
+          z-index: -1;
+          transition: 0.5s;
+          border-radius: 16px;
+
+        }
+        &:hover{
+          // border: 1px solid $clr2_pg;
+          background-color: $clr1_pg;
+          border: 2px solid $clr2_pg;
+          &::before{
+            width: 100%;
+            // left: 100%;
+            // background-color:aliceblue ;
+          }
+        }
+        // &:hover {
+        //   background-color: $clr1_pg;
+        //   border: 1px solid $clr2_pg;
+        // }
+      }
+    }
+
+    form {
+      @include flex(flex, unset, wrap, column);
+      align-items: center;
+      width: 60%;
+      height: 100%;
+      gap: 10px;
+      flex: 2;
+
+      .contact_btn {
+        font-size: 0.8rem;
+        border: 1px solid transparent;
+
+        font-weight: 500;
+        .icon_spinner {
+          animation: spin 3s;
+        }
+
+        @keyframes spin {
+          0% {
+            rotate: (60deg);
+          }
+          25% {
+            rotate: (90deg);
+          }
+          50% {
+            rotate: (180deg);
+          }
+          90% {
+            rotate: (360deg);
+          }
+          100% {
+            display: none;
+          }
+        }
+        &:hover {
+          // background-color: $clr_white;
+          color: $clr_white;
+          // border: $borderTr;
+        }
+      }
+      .form_input_cr{
+        position: relative;
+        z-index: 2;
+
+        // padding: 15px;
+        width: 100%;
+        border-radius: 6px;
+        // border: 1px solid $clr2_pg;
+        // border: 1px solid $clr2_pg;
+
+        background-color: transparent;
+        color: $clr_white;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background: #2c2c6c;
+          z-index: -1;
+          transition: 0.5s;
+        }
+        &:hover{
+          border: 2px solid $clr2_pg;
+
+          &::before{
+            width: 100%;
+            // left: 100%;
+            // background-color:aliceblue ;
+          }
+        }
+      }
+      input,
+      textarea {
+        padding: 15px;
+        width: 100%;
+        border-radius: 6px;
+        // border: 1px solid $clr2_pg;
+        border: 2px solid $clr2_pg;
+
+        background-color: transparent;
+        color: $clr_white;
+
+        // position: relative;
+// z-index: 2;
+&:focus{
+  outline: 2px solid $clr2_pg;
+  border: 2px solid $clr2_pg;
+
+}
+&:hover{
+
+    border: 2px solid $clr2_pg;
+}
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   top: 0;
+        //   left: 0;
+        //   width: 0;
+        //   height: 100%;
+        //   background: #2c2c6c;
+        //   z-index: -1;
+        //   transition: 0.5s;
+        // }
+        // &:hover{
+        //   border: 1px solid $clr2_pg;
+
+        //   &::before{
+        //     width: 100%;
+        //     // left: 100%;
+        //     // background-color:aliceblue ;
+        //   }
+        // }
+      }
+      textarea {
+        resize: none;
+      }
+      // .form_input{
+      //   position: relative;
+      //   background:transparent ;
+      //   border: 1px solid $clr2_pg;
+      //   z-index: 1;
+      // width: 100%;
+      // overflow: hidden;
+      //   &::before {
+      //     content: "";
+      //     position: absolute;
+      //     top: 0;
+      //     left: 0;
+      //     width: 0;
+      //     height: 100%;
+      //     background-color: #2c2c6c;
+      //     z-index: -1;
+      //     transition: 0.5s;
+      //   }
+      //   &:hover{
+      //     border: 1px solid $clr2_pg;
+
+      //     &::before{
+      //       width: 100%;
+      //       // left: 100%;
+      //       // background-color:aliceblue ;
+      //     }
+      //   }
+      // }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #contact {
+    height: 100%;
+    .contact_cr {
+      @include flex(flex, center, wrap, row);
+
+      width: 60%;
+      gap: 25%;
+
+      .options_list {
+        @include flex(flex, unset, wrap, column);
+        flex: 1;
+        gap: 20px;
+        width: 100%;
+        .option_item {
+          @include flex(flex, center, wrap, column);
+          align-items: center;
+          background-color: #2c2c6c;
+          border: 1px solid transparent;
+          min-width: fit-content;
+          width: 100%;
+
+          border-radius: 16px;
+          padding: 32px;
+
+          &:hover {
+            background-color: $clr1_pg;
+            border: 2px solid $clr2_pg;
+          }
+        }
+      }
+
+      form {
+        @include flex(flex, unset, wrap, column);
+        flex: 2;
+        position: relative;
+        align-items: center;
+        width: 60%;
+        height: 100%;
+        gap: 10px;
+        padding-top: 30px;
+        .contact_btn {
+          font-size: 0.8rem;
+          font-weight: 500;
+          .icon_spinner {
+            animation: spin 3s;
+          }
+
+          @keyframes spin {
+            0% {
+              rotate: (60deg);
+            }
+            25% {
+              rotate: (90deg);
+            }
+            50% {
+              rotate: (180deg);
+            }
+            90% {
+              rotate: (360deg);
+            }
+            100% {
+              display: none;
+            }
+          }
+          &:hover {
+            // background-color: $clr_white;
+            color: $clr_white;
+            // border: $borderTr;
+          }
+        }
+        input,
+        textarea {
+          padding: 15px;
+          width: 100%;
+          border-radius: 6px;
+          border: 2px solid $clr2_pg;
+          background-color: transparent;
+          color: $clr_white;
+        }
+        textarea {
+          resize: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #contact {
+    height: 100%;
+    .contact_cr {
+      @include flex(flex, unset, wrap, row);
+
+      width: 100%;
+      gap: 25%;
+
+      .options_list {
+        @include flex(flex, center, wrap, column);
+        align-items: center;
+        flex: 1;
+        gap: 20px;
+        width: 100%;
+        .option_item {
+          @include flex(flex, center, wrap, column);
+          align-items: center;
+          background-color: #2c2c6c;
+          border: 1px solid transparent;
+          min-width: 200px;
+          width: 210px;
+
+          border-radius: 16px;
+          padding: 32px;
+
+          &:hover {
+            background-color: $clr1_pg;
+            border: 2px solid $clr2_pg;
+          }
+        }
+      }
+
+      form {
+        @include flex(flex, unset, wrap, column);
+        flex: 2;
+
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        gap: 10px;
+        padding-top: 30px;
+        .contact_btn {
+          font-size: 0.8rem;
+          font-weight: 500;
+          .icon_spinner {
+            animation: spin 3s;
+          }
+
+          @keyframes spin {
+            0% {
+              rotate: (60deg);
+            }
+            25% {
+              rotate: (90deg);
+            }
+            50% {
+              rotate: (180deg);
+            }
+            90% {
+              rotate: (360deg);
+            }
+            100% {
+              display: none;
+            }
+          }
+          &:hover {
+            // background-color: $clr_white;
+            color: $clr_white;
+            // border: $borderTr;
+          }
+        }
+        input:not(input[type="submit"]),
+        textarea {
+          padding: 15px;
+          width: 210px;
+          border-radius: 6px;
+          border: 2px solid $clr2_pg;
+          background-color: transparent;
+          color: $clr_white;
+        }
+        textarea {
+          resize: none;
+        }
+      }
+    }
+  }
+}
