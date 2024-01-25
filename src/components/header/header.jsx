@@ -1,7 +1,7 @@
 import React from 'react';
 import "./scss/header.css";
 import Me5 from "../../assets/me5.png";
-import resume from "../../assets/mamoun_alshishani_resume.pdf";
+import resume from "../../assets/mamoun-b-cv.pdf";
 
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
