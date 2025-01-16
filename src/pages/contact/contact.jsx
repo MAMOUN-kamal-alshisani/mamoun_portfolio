@@ -41,19 +41,19 @@ function Contact() {
             <AiOutlineMessage/>
             <h4>Messenger</h4>
             <h5>mamoun.bursi</h5>
-            <a href="https://m.me/mamoun.bursi" target={'_blank'}>Send a Message</a>
+            <a href="https://m.me/mamoun.bursi" rel="noreferrer" target={'_blank'}>Send a Message</a>
           </article>
           <article className='option_item'>
             <GoMail/>
             <h4>Email</h4>
             <h5>mamoun.bursi@yahoo.com</h5>
-            <a href="mailto:mamoun.bursi@yahoo.com"  target={'_blank'}>Send a Message</a>
+            <a href="mailto:mamoun.bursi@yahoo.com" rel="noreferrer" target={'_blank'}>Send a Message</a>
           </article>
           <article className='option_item'>
             <AiOutlineWhatsApp/>
             <h4>WhatsApp</h4>
-            <h5>+962786833117</h5>
-            <a href="https://api.whatsapp.com/send?phone+962786833117"  target={'_blank'}>Send a Message</a>
+            <h5>+962781789220</h5>
+            <a href="https://api.whatsapp.com/send?phone+962786833117" rel="noreferrer" target={'_blank'}>Send a Message</a>
           </article>
           
         </div>
