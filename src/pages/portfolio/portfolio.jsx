@@ -24,11 +24,12 @@ function Portfolio() {
             </p>
 
             <a
-              href="https://mn-blog.netlify.app"
+              href="https://mn-blogify.netlify.app"
               className="btn"
               onMouseEnter={() => setShowIcon(!showIcon)}
               onMouseLeave={() => setShowIcon(false)}
               target={"_blank"}
+              rel="noreferrer"
             >
               {showIcon ? <IoIosOpen /> : "live demo"}
             </a>
@@ -36,6 +37,7 @@ function Portfolio() {
               href="https://github.com/MAMOUN-kamal-alshisani/Blogify"
               className="primary_btn"
               target={"_blank"}
+              rel="noreferrer"
             >
               github
               {/* { <IoIosOpen className="demo_icon"/>  }github */}
@@ -60,6 +62,7 @@ function Portfolio() {
               onMouseEnter={() => setShowIcon(!showIcon)}
               onMouseLeave={() => setShowIcon(false)}
               target={"_blank"}
+              rel="noreferrer"
             >
               {showIcon ? <IoIosOpen /> : "live demo"}
             </a>
@@ -67,6 +70,7 @@ function Portfolio() {
               href="https://github.com/MAMOUN-kamal-alshisani/bookme_frontend"
               className="primary_btn"
               target={"_blank"}
+              rel="noreferrer"
             >
               github
               {/* { <IoIosOpen className="demo_icon"/>  }github */}
@@ -95,6 +99,7 @@ function Portfolio() {
               onMouseEnter={() => setShowIcon(!showIcon)}
               onMouseLeave={() => setShowIcon(false)}
               target={"_blank"}
+              rel="noreferrer"
             >
               {showIcon ? <IoIosOpen /> : "live demo"}
             </a>
@@ -102,6 +107,7 @@ function Portfolio() {
               href="https://github.com/MAMOUN-kamal-alshisani/e_commerce"
               className="primary_btn"
               target={"_blank"}
+              rel="noreferrer"
             >
               github
               {/* { <IoIosOpen className="demo_icon"/>  }github */}

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./scss/header.css";
 import Me5 from "../../assets/me5.png";
-import resume from "../../assets/mamoun-b-cv.pdf";
+import resume from "../../assets/mamoun_resume_2025-8-21.pdf";
 
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -38,10 +38,6 @@ const Header = () => {
         <div className="myImg_div">
           <img src={Me5} alt="me" className="header_img"/>
         </div>
-
-        {/* <a href="#contact" className="scroll_down">
-          Scroll Down
-        </a> */}
 
 
       </div>
